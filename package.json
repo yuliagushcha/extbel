@@ -1,0 +1,45 @@
+{
+  "name": "extbel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "eslint src/index.js",
+    "fix": "eslint src/index.js --fix",
+    "clean": "rm -f -r dist",
+    "build-dev": "webpack -d --mode development",
+    "build-prod": "webpack -p",
+    "start": "webpack-dev-server --open --hot --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuliagushcha/extbel.git"
+  },
+  "author": "Yulia Gushcha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuliagushcha/extbel/issues"
+  },
+  "homepage": "https://github.com/yuliagushcha/extbel#readme",
+  "devDependencies": {
+    "css-loader": "^6.3.0",
+    "error-overlay-webpack-plugin": "^1.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "node": "^16.10.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.57.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {}
+}
