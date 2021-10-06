@@ -1,2 +1,108 @@
+@import 'reset.css';
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../assets/fonts/NotoSans-Regular.ttf") format("woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1920px;
+  height: 1750px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  max-height: 124px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(12, 47, 136, 0.15);
+}
+.header-logo {
+  width: 106, 25px;
+  height: 50px;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 596px;
+  height: 27px;
+}
+.header-nav-navItems {
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #3F4449;
+  cursor: pointer;
+}
+.header-nav-navItems:hover {
+  font-weight: 800;
+  text-shadow: 0px 0px 1px #3F4449;
+}
+.header-searchForm {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header-search {
+  height: 48px;
+  width: 100%;
+  max-width: 431px;
+  border: 1px solid #3F4449;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.header-search input[type=text] {
+  font-family: "Noto Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #3F4449;
+}
+.header-searchButton {
+  position: absolute;
+  right: 1px;
+  width: 46px;
+  height: 46px;
+  background: #3F97FB;
+  border: 0;
+  border-radius: 0px 1px 1px 0px;
+}
+.header-searchButton:hover {
+  border: 1px solid #3F4449;
+}
+.header-person {
+  display: flex;
+  align-items: center;
+}
+.header-person-login {
+  margin-left: 12px;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+.header-person:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 1px #3F4449;
+}
 
 /*# sourceMappingURL=style.css.map */

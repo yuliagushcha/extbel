@@ -2,15 +2,31 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require('webpack');
 
 const config = {
-  entry: './src/index.jsx',
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, './dist'),
+    filename: 'index.js',
+    publicPath: '/',
   },
+
+  mode: 'development',
+  
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        use: [{
+          loader: 'html-loader',
+          options: {
+            minimize: false
+          }
+        }]
+      },
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
@@ -70,16 +86,34 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  devServer: {
-    contentBase: './dist',
-  },
+  
   plugins: [
+    new MiniCssExtractPlugin({
+      template: './src/styles/style.css',
+      filename: 'styles/style.css',
+    }),
     new HtmlWebpackPlugin({
-      template: 'public/index.html',
+      template: './src/index.html',
+      filename: 'index.html'
     }),
     new ErrorOverlayPlugin(),
+    new CopyWebpackPlugin({ 
+      patterns: [
+        {from: './src/assets', to: './assets'},
+        {from: './src/styles', to: './styles'}
+      ] 
+    })
   ],
-  devtool: 'cheap-module-source-map',
+  
+  devServer: {
+        historyApiFallback: true,
+        contentBase: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
+        open: true,
+        compress: true,
+        hot: true,
+        port: 8080,
+    },
 }
 
 module.exports = config
