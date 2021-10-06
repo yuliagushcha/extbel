@@ -199,4 +199,132 @@
       }
     }
   }
+
+  &-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    height: 800px;
+    background: #F3FAFF;
+
+    &-header {
+      margin-top: 69px;
+      font-family: Noto Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 24px;
+      color: #0158BA;
+    }
+
+    &-slider {
+      display: flex;
+      width: 1272px!important;
+      height: 567px;
+      justify-content: space-between;
+    }
+
+    &-slide {
+      display: flex!important;
+      flex-direction: column;
+      width: 605px!important;
+      height: 548px;
+      filter: drop-shadow(0px 7px 6px rgba(16, 65, 187, 0.15));
+    }
+
+    &-articleArea {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      height: 178px;
+      background: #FFFFFF;
+    }
+
+    &-slideArticle {
+      padding-left: 32px;
+      font-family: Noto Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 38px;
+      color: #0158BA;
+    }
+
+    &-slideText, &-slideLink {
+      padding-left: 32px;
+      width: 538px;
+      font-family: Noto Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      color: #364D78;
+    }
+
+    &-slideLink {
+      color: #3F97FB;
+
+      &:hover {
+        cursor: pointer;
+        text-shadow: 0px 0px 1px #7bb7f3;
+      }
+      
+    }
+  }
+}
+
+// slick
+.slider {
+  margin: 52px 0 0 0 !important;
+}
+
+.slick {
+  &-slide {
+    margin: 0px 20px;
+    opacity: 1!important;
+    transition: all ease-in-out .3s;
+    opacity: .2;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &-prev {
+    left: -57px;
+  }
+
+  &-next {
+    right: -35px;
+  }
+
+  &-prev, &-next {
+
+    &:before {
+      font-size: 50px;
+      font-weight: 900;
+      line-height: 0;
+      opacity: 1;
+      color: white;
+      text-shadow: 0 0 4px #3f97fb;
+    }
+
+  }
+  
+
+  &-current {
+    opacity: 1;
+  }
+
+  &-dots {
+    bottom: -46px;
+
+    & li button:before {
+      font-size: 14px;
+      color: #3F97FB!important;
+    }
+  }
 }
