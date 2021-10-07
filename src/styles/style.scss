@@ -13,7 +13,7 @@
 .wrapper {
   width: 100%;
   max-width: 1920px;
-  height: 1750px;
+  height: 1729px;
 }
 
 .header {
@@ -50,11 +50,11 @@
       letter-spacing: -0.015em;
       text-align: left;
       color: #3F4449;
-      cursor: pointer;
 
       &:hover {
         font-weight: 800;
         text-shadow: 0px 0px 1px #3F4449;
+        cursor: pointer;
       }
     }
   }
@@ -271,7 +271,169 @@
         cursor: pointer;
         text-shadow: 0px 0px 1px #7bb7f3;
       }
-      
+
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1920px;
+  height: 183px;
+  background: #FFFFFF;
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 604px;
+    height: 27px;
+
+    &-navItems {
+      font-family: Noto Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 27px;
+      letter-spacing: -0.015em;
+      color: #3F4449;
+
+      &:hover {
+        font-weight: 800;
+        text-shadow: 0px 0px 1px #3F4449;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 28px;
+  }
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 18%;
+  left: 37%;
+  width: 440px;
+  height: 467px;
+  padding: 20px 20px 55px 20px;
+  background: white;
+  visibility: hidden;
+
+  &-closeButton {
+    align-self: flex-end;
+
+    &:hover {
+      cursor: pointer;
+      outline: 1px solid #3F4449;
+    }
+  }
+
+  &-title {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.015em;
+    color: #3F4449;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    height: 303px;
+
+    &-name, &-password {
+      font-family: Noto Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      color: #3F4449;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-nameInput, &-passwordInput {
+      height: 54px;
+      width: 360px;
+      background: rgba(189, 220, 254, 0.05);
+      border: 1px solid #BDDCFE;
+      box-sizing: border-box;
+      border-radius: 2px;
+    }
+
+    &-nameInput {
+      margin-bottom: 23px;
+    }
+
+    &-forgotPassword {
+      font-family: Noto Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration-line: underline;
+      color: #3F97FB;
+
+      &:hover {
+        cursor: pointer;
+        text-shadow: 0px 0px 1px #91bde8;
+      }
+    }
+
+    &-loginButton, &-signinButton {
+      width: 360px;
+      height: 60px;
+      margin-top: 40px;
+      font-family: Noto Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 24px;
+      color: #FFFFFF;
+      background: #3F97FB;
+      border: 0;
+      border-radius: 100px;
+
+      &:hover {
+        cursor: pointer;
+        text-shadow: 0px 0px 1px white;
+        box-shadow: 0px 0px 6px #6c96ca;
+      }
+    }
+
+    &-signinButton {
+      align-self: center;
+      width: 58px;
+      height: 24px;
+      margin-top: 0;
+      font-size: 18px;
+      color: #3F97FB;
+      background: white;
+
+      &:hover {
+        text-shadow: 0px 0px 1px #91bde8;
+        box-shadow: none;
+      }
     }
   }
 }

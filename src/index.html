@@ -15,25 +15,23 @@
   <div class="wrapper">
     <header class="header">
       <img src="./assets/images/logo-2.png"/>
-      <nav class="header-nav">
-        <ul class="header-nav">
-          <li class="header-nav-navItems">
-            <p>Main</p>
-          </li>
-          <li class="header-nav-navItems">
-            <p>Services</p>
-          </li>
-          <li class="header-nav-navItems">
-            <p>Projects</p>
-          </li>
-          <li class="header-nav-navItems">
-            <p>Contacts</p>
-          </li>
-          <li class="header-nav-navItems">
-            <p>About us</p>
-          </li>
-        </ul>
-      </nav>
+      <ul class="header-nav">
+        <li class="header-nav-navItems">
+          <p>Main</p>
+        </li>
+        <li class="header-nav-navItems">
+          <p>Services</p>
+        </li>
+        <li class="header-nav-navItems">
+          <p>Projects</p>
+        </li>
+        <li class="header-nav-navItems">
+          <p>Contacts</p>
+        </li>
+        <li class="header-nav-navItems">
+          <p>About us</p>
+        </li>
+      </ul>
       <form class="header-searchForm">
         <input class="header-search" type="text" placeholder="">
         <button class="header-searchButton" type="button">
@@ -119,13 +117,46 @@
             </section>
           </section>
         </section>
-    </section>
-
+      </section>
     </main>
 
     <footer class="footer">
-
+      <ul class="footer-nav">
+        <li class="footer-nav-navItems">
+          <p>About us</p>
+        </li>
+        <li class="footer-nav-navItems">
+          <p>Services</p>
+        </li>
+        <li class="footer-nav-navItems">
+          <p>Projects</p>
+        </li>
+        <li class="footer-nav-navItems">
+          <p>Gallery</p>
+        </li>
+        <li class="footer-nav-navItems">
+          <p>Contacts</p>
+        </li>
+      </ul>
+      <section class="footer-icons">
+        <a href="https://whatsapp.com"><img src="./assets/images/WhatsApp.png"></a>
+        <a href="https://slack.com"><img src="./assets/images/Slack.png"></a>
+        <a href="https://instagram.com"><img src="./assets/images/Instagram.png"></a>
+      </section>
     </footer>
+    <div class="login">
+      <img class="login-closeButton" src="./assets/images/close-2.png">
+      <h2 class="login-title">Log in</h2>
+      <form class="login-form">
+        <label class="login-form-name" for="name">Name*</label>
+        <input name="name" class="login-form-nameInput" id="name" type="text" placeholder="" required>
+        <label class="login-form-password" for="password">Password*</label>
+        <input name="password" class="login-form-passwordInput" id="password" type="password" placeholder="" required>
+        <p class="login-form-forgotPassword">I forgot the password</p>
+        <button class="login-form-loginButton" type="button">Log in</button>
+      </form>
+      <button class="login-form-signinButton" type="button">Sign in</button>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
